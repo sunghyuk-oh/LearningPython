@@ -20,6 +20,7 @@ def delete_task(user_input, todolist):
 
     for i in range(len(todolist)):
         if todolist[i] == todolist[index_num - 1]:
+            print(f"The task, '{todolist[i]['Title']}' has been removed.")
             del todolist[i]
             break
 
