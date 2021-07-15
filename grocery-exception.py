@@ -1,3 +1,5 @@
+# To imporve the code, I need to create a FUNCTION for codes that are used multiple times.
+
 shopping_lists = []
 
 
