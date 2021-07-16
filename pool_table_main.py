@@ -1,4 +1,4 @@
-from table_sub import PoolTable
+from pool_table_class import PoolTable
 from datetime import datetime, timedelta
 import json
 import time
@@ -24,7 +24,7 @@ def main(tables, log_lists):
         if minute < 1:
             minute = 0
 
-        return minute
+        return round(minute)
 
     def calculate_total_time_played(total_time):
         total_in_seconds = total_time.total_seconds()
@@ -34,7 +34,7 @@ def main(tables, log_lists):
         if minute < 1:
             minute = 0
 
-        return minute
+        return round(minute)
 
     def calculate_amount(min):
         hour = min / 60
@@ -138,10 +138,11 @@ def main(tables, log_lists):
         else:
             print("You entered the wrong input. Please try again")
 
-    print("\nPrinting out the today's log..\n")
-    time.sleep(3)
-    print('-------------------------------')
-    print_out_log()
+    # Reading from .json file and printing out
+    # print("\nPrinting out the today's log..\n")
+    # time.sleep(3)
+    # print('-------------------------------')
+    # print_out_log()
 
 
 main(tables, log_lists)
